@@ -7,7 +7,7 @@ public class Departamento(){
 
     public Departamento(String nombre, String jefeDepartamento, double presupuestoAnual){
     this.nombre = nombre;
-    thos.jefeDepartamento = jefeDepartamento;
+    this.jefeDepartamento = jefeDepartamento;
     this.presupuestoAnual = presupuestoAnual;
     this.empleados = new ArrayList<>();    
     }

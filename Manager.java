@@ -1,24 +1,36 @@
 public class Manager extends Empleado {
-    protected int personasACargo; 
+    private String titulo;
+    private double presupuestoGestionado;
+    private int reunionesSemanales; 
 
-    public Manager(String dni, String nombre, int edad, double salarioBase, int antiguedadAnios, int personasACargo){
-        super(dni, nombre, edad, salarioBase, antiguedadAnios);
-        this.personasACargo = personasACargo;
+    public Manager(String dni, String nombre, int edad, 
+        double salarioBase, int antiguedadAnios,
+        String idEmpleado, LocalDate fechaContratacion,
+        String departamento, double jornadaHoraria, boolean activo,
+        String titulo, double presupuestoGestionado, int reunionesSemanales) {
+
+        super(dni, nombre, edad, salarioBase, antiguedadAnios, idEmpleado, fechaContratacion, departamento, jornadaHoraria, activo);
+        this.titulo = titulo;
+        this.presupuestoGestionado = presupuestoGestionado;
+        this.reunionesSemanales = reunionesSemanales; 
     }
 
-    public int getPersonasACargo(){
-        return personasACargo;
-    }
-
-    public void setPersonasACargo(int personasACargo){
-        this.personasACargo = personasACargo; 
+    public void aprobarHorasExtraÇ(desarrollador  dev, double horas){
+        dev.registrarHorasExtra(horas);
+        System.out.println("El manager " + nombre + " ha aprobado " + horas + " horas extra para " + dev.getNombre())
     }
 
     @Override 
-    public double calcularSalario() {
-        double plusResponsabilidad = personasACargo * 100;
-        double plusAntiguedad = antiguedadAnios * 75;
-        return salarioBase + plusResponsabilidad + plusAntiguedad;      
+    public double calcularAntiguedad() {
+        int antiguedad = calcularAntiguedad();
+        double plusAntiguedad = salarioBase * (0.03 * antiguedad);
+        double plusPersonasCargo = personasACargo * 250;
+        double bonusPresupuesto = presupuestoGestionado * 0.002;
+
+        return salarioBase + plusAntiguedad + plusPersonasCargo + bonusPresupuesto;
     }
+
+    @Override
+    public super.toString("Título: " + titulo + ", Presupuesto gestionado: " + presupuestoGestionado + ", Reuniones semanales: " + reunionesSemanales);
 
 }
