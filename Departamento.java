@@ -22,18 +22,6 @@ public class Departamento(){
     return new ArrayList<>(empleados);
   }
 
-  public double calcularNominaDepartamentos(GestorEmpleados gestor){
-    double total = 0;
-
-    for (String id : empleados){
-        Empleado e = gestor.buscarEmpleado(id);
-        if (e !=null && e.isActivo()){
-            total += e.calcularSalario();
-        }
-    }
-    reutrn total;
-  }
-
   public String getNombre() {
         return nombre;
     }
