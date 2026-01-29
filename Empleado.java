@@ -1,3 +1,7 @@
+import java.time.LocalDate;
+import java.time.Period;
+
+
 public class Empleado extends Persona {
     protected double salarioBase;
     protected int antiguedadAnios;
@@ -18,6 +22,11 @@ public class Empleado extends Persona {
         this.activo = activo;
     }
     
+    public Empleado(String dni, String nombre, int edad, double salarioBase, int antiguedadAnios) {
+        super();
+    }
+
+
     public String getIdEmpleado() {
         return idEmpleado;
     }
@@ -47,10 +56,6 @@ public class Empleado extends Persona {
     }
 
 
-    public double calcularSalario() {
-        return salarioBase;
-    }
-    
     public double getSalarioBase() {
         return salarioBase;
     }
@@ -75,7 +80,6 @@ public class Empleado extends Persona {
         return Period.between(fechaContratacion, LocalDate.now()).getYears();
     }
     
-    @Override
     public double calcularSalario() {
         int antiguedad = calcularAntiguedad();
         double plusAntiguedad = salarioBase * (0.03 * antiguedad);

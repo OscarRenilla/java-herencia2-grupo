@@ -1,7 +1,10 @@
-public class Departamento(){
+import java.util.ArrayList;
+import java.util.List;
+
+public class Departamento{
 
     private String nombre;
-    private String jefeDepartamento
+    private String jefeDepartamento;
     private double presupuestoAnual;
     private List<String> empleados;
 
@@ -12,7 +15,7 @@ public class Departamento(){
     this.empleados = new ArrayList<>();    
     }
 
-    public void agregarEmpleados(String idEmpleado){
+    public void agregarEmpleado(String idEmpleado){
         if (!empleados.contains(idEmpleado)){
             empleados.add(idEmpleado);
         }
