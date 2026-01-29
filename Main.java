@@ -35,9 +35,9 @@ public class Main {
     }
     
     static void menuContratacion() {
-        System.out.println("1.1. Contratar empleado");
-        System.out.println("1.2. Asignar a departamento");
-        System.out.println("1.3. Ver contratos activos");
+        System.out.println("1 Contratar empleado");
+        System.out.println("2 Asignar a departamento");
+        System.out.println("3 Ver contratos activos");
         int op = Integer.parseInt(scanner.nextLine());
         
         if (op == 1) {
@@ -78,10 +78,10 @@ public class Main {
     }
     
     static void menuFichaje() {
-        System.out.println("2.1. Registrar entrada");
-        System.out.println("2.2. Registrar salida");
-        System.out.println("2.3. Consultar mis fichajes");
-        System.out.println("2.4. Reporte mensual de horas");
+        System.out.println("1 Registrar entrada");
+        System.out.println("2 Registrar salida");
+        System.out.println("3 Consultar mis fichajes");
+        System.out.println("4 Reporte mensual de horas");
         int op = Integer.parseInt(scanner.nextLine());
         System.out.print("ID Empleado: "); String id = scanner.nextLine();
         
@@ -100,9 +100,9 @@ public class Main {
     }
     
     static void menuNominas() {
-        System.out.println("3.1. Calcular salario empleado");
-        System.out.println("3.2. Calcular nómina total");
-        System.out.println("3.3. Ver historial de pagos");
+        System.out.println("1 Calcular salario empleado");
+        System.out.println("2 Calcular nómina total");
+        System.out.println("3 Ver historial de pagos");
         int op = Integer.parseInt(scanner.nextLine());
         
         if (op == 1) {
@@ -120,9 +120,9 @@ public class Main {
     }
     
     static void menuProyectos() {
-        System.out.println("4.1. Asignar a proyecto");
-        System.out.println("4.2. Registrar horas proyecto");
-        System.out.println("4.3. Ver productividad");
+        System.out.println("1 Asignar a proyecto");
+        System.out.println("2 Registrar horas proyecto");
+        System.out.println("3 Ver productividad");
         int op = Integer.parseInt(scanner.nextLine());
         
         if (op == 1) {
@@ -152,10 +152,10 @@ public class Main {
     }
     
     static void menuInformes() {
-        System.out.println("5.1. Empleados por departamento");
-        System.out.println("5.2. Asistencia mensual");
-        System.out.println("5.3. Horas extra aprobadas");
-        System.out.println("5.4. Proyectos activos");
+        System.out.println("1 Empleados por departamento");
+        System.out.println("2 Asistencia mensual");
+        System.out.println("3 Horas extra aprobadas");
+        System.out.println("4 Proyectos activos");
         int op = Integer.parseInt(scanner.nextLine());
         
         if (op == 1) {
