@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Departamento{
+
+    private String nombre;
+    private String jefeDepartamento;
+    private double presupuestoAnual;
+    private List<String> empleados;
+
+    public Departamento(String nombre, String jefeDepartamento, double presupuestoAnual){
+    this.nombre = nombre;
+    this.jefeDepartamento = jefeDepartamento;
+    this.presupuestoAnual = presupuestoAnual;
+    this.empleados = new ArrayList<>();    
+    }
+
+    public void agregarEmpleado(String idEmpleado){
+        if (!empleados.contains(idEmpleado)){
+            empleados.add(idEmpleado);
+        }
+    }
+
+  public List<String> listarEmpleados(){
+    return new ArrayList<>(empleados);
+  }
+
+  public String getNombre() {
+        return nombre;
+    }
+
+    public String getJefeDepartamento() {
+        return jefeDepartamento;
+    }
+
+    public double getPresupuestoAnual() {
+        return presupuestoAnual;
+    }
+}
