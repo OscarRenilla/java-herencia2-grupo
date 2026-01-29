@@ -1,5 +1,8 @@
+import java.time.LocalDate;
+
 public class Manager extends Empleado {
     private String titulo;
+    private double personasACargo;
     private double presupuestoGestionado;
     private int reunionesSemanales; 
 
@@ -15,22 +18,25 @@ public class Manager extends Empleado {
         this.reunionesSemanales = reunionesSemanales; 
     }
 
-    public void aprobarHorasExtraÇ(desarrollador  dev, double horas){
-        dev.registrarHorasExtra(horas);
-        System.out.println("El manager " + nombre + " ha aprobado " + horas + " horas extra para " + dev.getNombre())
+    public Manager(String id, String nombre, LocalDate fn, String email, String tel, double sal, LocalDate now, String titulo, double pres, int i) {
     }
 
-    @Override 
-    public double calcularAntiguedad() {
+    public void aprobarHorasExtra(Desarrollador  dev, double horas){
+        dev.registrarHoraExtra(horas);
+        System.out.println("El manager " + nombre + " ha aprobado " + horas + " horas extra para " + dev.getNombre());
+    }
+
+    public int calcularAntiguedad() {
         int antiguedad = calcularAntiguedad();
         double plusAntiguedad = salarioBase * (0.03 * antiguedad);
         double plusPersonasCargo = personasACargo * 250;
         double bonusPresupuesto = presupuestoGestionado * 0.002;
 
-        return salarioBase + plusAntiguedad + plusPersonasCargo + bonusPresupuesto;
+        return (int) salarioBase + plusAntiguedad + plusPersonasCargo + bonusPresupuesto;
     }
 
     @Override
-    public super.toString("Título: " + titulo + ", Presupuesto gestionado: " + presupuestoGestionado + ", Reuniones semanales: " + reunionesSemanales);
-
+    public String toString(){
+        return ("Título: " + titulo + ", Presupuesto gestionado: " + presupuestoGestionado +  ", personasACargo=" + personasACargo + ", Reuniones semanales: " + reunionesSemanales);
+    }
 }
