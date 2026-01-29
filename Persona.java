@@ -2,19 +2,25 @@ import java.time.LocalDate;
 
 public class Persona {
 
-    private String dni;
+    protected String dni;
     protected String nombre;
+    protected int edad;
     protected LocalDate fechaNacimiento;
     protected String email;
     protected int telefono;
     
 
-    public Persona(String dni, String nombre, LocalDate fechaNacimiento, String email, int telefono) {
+    public Persona(String dni, String nombre, int edad, LocalDate fechaNacimiento, String email, int telefono) {
         this.dni = dni;
         this.nombre = nombre;
+        this.edad = edad;
         this.fechaNacimiento = fechaNacimiento;
         this.email = email;
         this.telefono = telefono;
+    }
+
+    public Persona(String dni, String nombre, int edad) {
+
     }
 
     public String getDni() {
@@ -23,6 +29,10 @@ public class Persona {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public int getEdad () {
+        return edad;
     }
 
     public LocalDate getFechaNacimiento() {
