@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Persona1 {
+public class Persona {
 
     private String dni;
     protected String nombre;
@@ -9,7 +9,7 @@ public class Persona1 {
     protected int telefono;
     
 
-    public Persona1(String dni, String nombre, LocalDate fechaNacimiento, String email, int telefono) {
+    public Persona(String dni, String nombre, LocalDate fechaNacimiento, String email, int telefono) {
         this.dni = dni;
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
