@@ -16,6 +16,10 @@ public class Desarrollador extends Empleado {
         this.horasExtra = 0.0;
     }
 
+    public Desarrollador (String id, String nombre, LocaDate fn, String email, String tel. Double sal, LocalDate now, String nivel){
+        super();
+    }
+
     public String getLenguajePrincipal() {
         return lenguajePrincipal;
     }
@@ -52,7 +56,7 @@ public class Desarrollador extends Empleado {
         this.horasExtra += horas;
     }
 
-    @Override
+    
     public double calcularSalario() {
         double salarioBase = super.calcularSalario(); // Incluye plus antigüedad si Empleado.java ya lo tiene
         double plusNivel = 0.0;
